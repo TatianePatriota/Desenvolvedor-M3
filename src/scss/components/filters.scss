@@ -1,0 +1,10 @@
+.filters {
+  width: 161px;
+}
+
+@media screen and (max-width: $mobile) {
+  .filters__mobile {
+    width: 100%;
+    background-color: black;
+  }
+}

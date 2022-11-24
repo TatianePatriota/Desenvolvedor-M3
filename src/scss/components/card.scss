@@ -1,0 +1,73 @@
+main {
+  min-height: calc(100vh - 245px);
+}
+
+.card--information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card--title {
+  font-size: 14px;
+  font-weight: 400;
+  color: $black;
+  text-transform: uppercase;
+  line-height: 19px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.card--price {
+  font-size: 16px;
+  font-weight: 700;
+  color: $black;
+  line-height: 22px;
+}
+
+.card--installment {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: $light-gray;
+  margin-bottom: 14px;
+}
+
+.card--button {
+  background-color: $black;
+  color: $white;
+  padding: 7px;
+  border: none;
+  text-transform: uppercase;
+  width: 100%;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.product__card {
+  margin: 0 65px 42px 65px;
+}
+main {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 976px;
+}
+
+@media screen and (max-width: $mobile) {
+  main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    min-height: calc(100vh - 265px);
+  }
+
+  .product__card {
+    margin: 0;
+    margin-top: 18px;
+  }
+
+  .card--img {
+    width: 162px;
+  }
+}

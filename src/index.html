@@ -1,19 +1,680 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Desenvolvedor M3</title>
+  </head>
+  <body>
+    <header>
+      <nav class="">
+        <div class="container between align-center navigation">
+          <a href=""
+            ><img src="./img/logo-m3.png" alt="Logo M3" class="img__logo"
+          /></a>
+          <a href="#"><img src="./img/img_11.png" alt="Sacola de compras" /></a>
+        </div>
+      </nav>
+    </header>
+    <section class="container between align-center introduction__container">
+      <div>
+        <h2 class="introduction__container--title">Blusas</h2>
+      </div>
+      <div class="introduction__container--btn only-mobile">
+        <button class="btn__introduction btn__mobibe-filter" id="js-filter-mobile">Filtrar</button>
+        <button
+          class="btn__introduction btn__mobile-order"
+          id="js-order-mobile"
+        >
+          Ordenar
+        </button>
+      </div>
+      <div class="introduction__container--btn">
+        <button class="introduction__container--button" id="js-order-by-button">
+          Ordenar por: <span class="introduction__container--icon"></span>
+        </button>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Desenvolvedor M3</title>
-  <link rel="stylesheet" href="main.css" />
-</head>
+        <div class="container__button--items" id="js-order-by-options">
+          <ul>
+            <li>
+              <button
+                class="introduction__container--button button--items "
+                id="js-order-recent"
+              >
+                Mais recente
+              </button>
+            </li>
+            <li>
+              <button
+                class="introduction__container--button button--items"
+                id="js-order-lowest-price"
+              >
+                Menor preço
+              </button>
+            </li>
+            <li>
+              <button
+                class="introduction__container--button button--items"
+                id="js-order-biggest-price"
+              >
+                Maior preço
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <div class="container">
+      <aside class="filters filters__mobile" id="js-filters">
+        <h3 class="container__title">Cores</h3>
+        <div class="container__checkbox container__checkbox--colors">
+          <input
+            type="checkbox"
+            name="checkbox"
+            id="color1"
+            class="container__input"
+          />
+          <label class="container__label" for="color1">Amarelo</label>
+        </div>
+        <div class="container__checkbox container__checkbox--colors">
+          <input
+            type="checkbox"
+            name="checkbox"
+            id="color2"
+            class="container__input"
+          />
+          <label class="container__label" for="color2">Azul</label>
+        </div>
+        <div class="container__checkbox container__checkbox--colors">
+          <input
+            type="checkbox"
+            name="checkbox"
+            id="color3"
+            class="container__input"
+          />
+          <label class="container__label" for="color3">Branco</label>
+        </div>
+        <div class="container__checkbox container__checkbox--colors">
+          <input
+            type="checkbox"
+            name="checkbox"
+            id="color4"
+            class="container__input"
+          />
+          <label class="container__label" for="color4">Cinza</label>
+        </div>
+        <div class="container__checkbox container__checkbox--colors">
+          <input
+            type="checkbox"
+            name="checkbox"
+            id="color5"
+            class="container__input"
+          />
+          <label class="container__label" for="color5">Laranja</label>
+        </div>
 
-<body>
+        <div class="container__checkbox container__checkbox--colors  desktop-hidden">
+          <input
+            type="checkbox"
+            name="checkbox"
+            id="color6"
+            class="container__input"
+          />
+          <label class="container__label" for="color6">Verde</label>
+        </div>
+        <div class="container__checkbox container__checkbox--colors desktop-hidden">
+          <input
+            type="checkbox"
+            name="checkbox"
+            id="color7"
+            class="container__input"
+          />
+          <label class="container__label" for="color7">Vermelho</label>
+        </div>
+        <div class="container__checkbox container__checkbox--colors desktop-hidden">
+          <input
+            type="checkbox"
+            name="checkbox"
+            id="color8"
+            class="container__input"
+          />
+          <label class="container__label" for="color8">Preto</label>
+        </div>
+        <div class="container__checkbox container__checkbox--colors desktop-hidden">
+          <input
+            type="checkbox"
+            name="checkbox"
+            id="color9"
+            class="container__input"
+          />
+          <label class="container__label" for="color9">Rosa</label>
+        </div>
+        <div class="container__checkbox container__checkbox--colors desktop-hidden">
+          <input
+            type="checkbox"
+            name="checkbox"
+            id="color10"
+            class="container__input"
+          />
+          <label class="container__label" for="color10">Vinho</label>
+        </div>
 
-</body>
-<h1>Desafio m3</h1>
+        <div>
+          <p class="view__more--colors" id="js-more-colors">
+            Ver todas as cores <span class="view__more--colors-icon"></span>
+          </p>
+        </div>
+        <h3 class="container__title">Tamanhos</h3>
+        <div class="container__checkbox--size">
+          <div class="container__checkbox container__checkbox--items">
+            <input
+              type="checkbox"
+              name="checkbox"
+              id="size1"
+              class="container__size"
+            />
+            <label class="container__label--size" for="size1">p</label>
+          </div>
+          <div class="container__checkbox container__checkbox--items">
+            <input
+              type="checkbox"
+              name="checkbox"
+              id="size2"
+              class="container__size"
+            />
+            <label class="container__label--size" for="size2">m</label>
+          </div>
+          <div class="container__checkbox container__checkbox--items">
+            <input
+              type="checkbox"
+              name="checkbox"
+              id="size3"
+              class="container__size"
+            />
+            <label class="container__label--size" for="size3">g</label>
+          </div>
+          <div class="container__checkbox container__checkbox--items">
+            <input
+              type="checkbox"
+              name="checkbox"
+              id="size4"
+              class="container__size"
+            />
+            <label class="container__label--size" for="size4">gg</label>
+          </div>
+          <div class="container__checkbox container__checkbox--items">
+            <input
+              type="checkbox"
+              name="checkbox"
+              id="size5"
+              class="container__size"
+            />
+            <label class="container__label--size" for="size5">u</label>
+          </div>
+          <div class="container__checkbox container__checkbox--items">
+            <input
+              type="checkbox"
+              name="checkbox"
+              id="size6"
+              class="container__size"
+            />
+            <label class="container__label--size" for="size6">36</label>
+          </div>
+          <div class="container__checkbox container__checkbox--items">
+            <input
+              type="checkbox"
+              name="checkbox"
+              id="size7"
+              class="container__size"
+            />
+            <label class="container__label--size" for="size7">38</label>
+          </div>
+          <div class="container__checkbox container__checkbox--items">
+            <input
+              type="checkbox"
+              name="checkbox"
+              id="size8"
+              class="container__size"
+            />
+            <label class="container__label--size" for="size8">40</label>
+          </div>
+          <div class="container__checkbox container__checkbox--items">
+            <input
+              type="checkbox"
+              name="checkbox"
+              id="size9"
+              class="container__size"
+            />
+            <label class="container__label--size" for="size9">36</label>
+          </div>
+          <div class="container__checkbox container__checkbox--items">
+            <input
+              type="checkbox"
+              name="checkbox"
+              id="size10"
+              class="container__size"
+            />
+            <label class="container__label--size" for="size10">38</label>
+          </div>
+          <div class="container__checkbox container__checkbox--items">
+            <input
+              type="checkbox"
+              name="checkbox"
+              id="size11"
+              class="container__size"
+            />
+            <label class="container__label--size" for="size11">40</label>
+          </div>
+        </div>
+        <h3 class="container__title">Faixa de Preço</h3>
+        <div>
+          <div class="container__checkbox container__checkbox--price">
+            <input
+              type="checkbox"
+              name="checkbox"
+              id="price1"
+              class="container__input"
+            />
+            <label class="container__label" for="price1">de R$0 até R$50</label>
+          </div>
+          <div class="container__checkbox container__checkbox--price">
+            <input
+              type="checkbox"
+              name="checkbox"
+              id="price2"
+              class="container__input"
+            />
+            <label class="container__label" for="price2"
+              >de R$51 até R$150</label
+            >
+          </div>
+          <div class="container__checkbox container__checkbox--price">
+            <input
+              type="checkbox"
+              name="checkbox"
+              id="price3"
+              class="container__input"
+            />
+            <label class="container__label" for="price3"
+              >de R$151 até R$300</label
+            >
+          </div>
+          <div class="container__checkbox container__checkbox--price">
+            <input
+              type="checkbox"
+              name="checkbox"
+              id="price4"
+              class="container__input"
+            />
+            <label class="container__label" for="price4"
+              >de R$301 até R$500</label
+            >
+          </div>
+          <div class="container__checkbox container__checkbox--price">
+            <input
+              type="checkbox"
+              name="checkbox"
+              id="price5"
+              class="container__input"
+            />
+            <label class="container__label" for="price5"
+              >a partir de R$ 500</label
+            >
+          </div>
+        </div>
+      </aside>
 
-<script src="bundle.js"></script>
+      <main id="js-main"></main>
+    </div class= "button__wiew">
+    <div class="button__wiew">
+      <button class="button__main" id="js-button-load">Carregar mais</button>
+    </div>
 
+    <!-- modais para a tela mobile -->
+
+      <div class="container__modal only-mobile hidden" id="modal__mobile--order">
+        <div class="modal__header">
+          <h1 class="modal__header--title">Ordenar</h1>
+          <div class="button__mobile--modal" id="js-modal-close"></div>
+        </div>
+        <div id="js-order-by-options">
+          <ul>
+            <li>
+              <button
+                class="introduction__container--button button--items "
+                id="js-order-recent-modal"
+              >
+                Mais recente
+              </button>
+            </li>
+            <li>
+              <button
+                class="introduction__container--button button--items"
+                id="js-order-lowest-price-modal"
+              >
+                Menor preço
+              </button>
+            </li>
+            <li>
+              <button
+                class="introduction__container--button button--items"
+                id="js-order-biggest-price-modal"
+              >
+                Maior preço
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container__modal only-mobile hidden" id="modal-mobile-filter">
+        <div class="modal__header">
+          <h1 class="modal__header--title">Filtrar</h1>
+          <div class="button__mobile--modal" id="js-modal-close-filter"></div>
+        </div>
+        <div class="container__modal--mobile">
+          <details class="collapse">
+            <summary class="container__modal--options title" id="js-modal-colors">
+              <h3 class="container__title" id="js-filter-modal-colors">Cores</h3>
+              <div class="chevron-down"></div>
+            </summary>
+            <div class="hidden" id="js-show-colors">
+              <div class="container__checkbox container__checkbox--colors">
+                <input
+                  type="checkbox"
+                  name="checkbox"
+                  id="color1"
+                  class="container__input"
+                />
+                <label class="container__label" for="color1">Amarelo</label>
+              </div>
+              <div class="container__checkbox container__checkbox--colors">
+                <input
+                  type="checkbox"
+                  name="checkbox"
+                  id="color2"
+                  class="container__input"
+                />
+                <label class="container__label" for="color2">Azul</label>
+              </div>
+              <div class="container__checkbox container__checkbox--colors">
+                <input
+                  type="checkbox"
+                  name="checkbox"
+                  id="color3"
+                  class="container__input"
+                />
+                <label class="container__label" for="color3">Branco</label>
+              </div>
+              <div class="container__checkbox container__checkbox--colors">
+                <input
+                  type="checkbox"
+                  name="checkbox"
+                  id="color4"
+                  class="container__input"
+                />
+                <label class="container__label" for="color4">Cinza</label>
+              </div>
+              <div class="container__checkbox container__checkbox--colors">
+                <input
+                  type="checkbox"
+                  name="checkbox"
+                  id="color5"
+                  class="container__input"
+                />
+                <label class="container__label" for="color5">Laranja</label>
+              </div>
+      
+              <div class="container__checkbox container__checkbox--colors desktop-hidden">
+                <input
+                  type="checkbox"
+                  name="checkbox"
+                  id="color6"
+                  class="container__input"
+                />
+                <label class="container__label" for="color6">Verde</label>
+              </div>
+              <div class="container__checkbox container__checkbox--colors desktop-hidden">
+                <input
+                  type="checkbox"
+                  name="checkbox"
+                  id="color7"
+                  class="container__input"
+                />
+                <label class="container__label" for="color7">Vermelho</label>
+              </div>
+              <div class="container__checkbox container__checkbox--colors desktop-hidden">
+                <input
+                  type="checkbox"
+                  name="checkbox"
+                  id="color8"
+                  class="container__input"
+                />
+                <label class="container__label" for="color8">Preto</label>
+              </div>
+              <div class="container__checkbox container__checkbox--colors desktop-hidden">
+                <input
+                  type="checkbox"
+                  name="checkbox"
+                  id="color9"
+                  class="container__input"
+                />
+                <label class="container__label" for="color9">Rosa</label>
+              </div>
+              <div class="container__checkbox container__checkbox--colors desktop-hidden">
+                <input
+                  type="checkbox"
+                  name="checkbox"
+                  id="color10"
+                  class="container__input"
+                />
+                <label class="container__label" for="color10">Vinho</label>
+              </div>
+            </div>
+            
+          </details>
+          <details class="collapse">
+            <summary class="container__modal--options title" >
+              <h3 class="container__title" id="js-filters-modal-size">Tamanhos</h3>
+              <div class="chevron-down"></div>
+            </summary>
+            <div class="container__checkbox--size hidden" id="js-show-sizes">
+              <div class="container__checkbox container__checkbox--items">
+                <input
+                  type="checkbox"
+                  name="checkbox"
+                  id="size1"
+                  class="container__size"
+                />
+                <label class="container__label--size" for="size1">p</label>
+              </div>
+              <div class="container__checkbox container__checkbox--items">
+                <input
+                  type="checkbox"
+                  name="checkbox"
+                  id="size2"
+                  class="container__size"
+                />
+                <label class="container__label--size" for="size2">m</label>
+              </div>
+              <div class="container__checkbox container__checkbox--items">
+                <input
+                  type="checkbox"
+                  name="checkbox"
+                  id="size3"
+                  class="container__size"
+                />
+                <label class="container__label--size" for="size3">g</label>
+              </div>
+              <div class="container__checkbox container__checkbox--items">
+                <input
+                  type="checkbox"
+                  name="checkbox"
+                  id="size4"
+                  class="container__size"
+                />
+                <label class="container__label--size" for="size4">gg</label>
+              </div>
+              <div class="container__checkbox container__checkbox--items">
+                <input
+                  type="checkbox"
+                  name="checkbox"
+                  id="size5"
+                  class="container__size"
+                />
+                <label class="container__label--size" for="size5">u</label>
+              </div>
+              <div class="container__checkbox container__checkbox--items">
+                <input
+                  type="checkbox"
+                  name="checkbox"
+                  id="size6"
+                  class="container__size"
+                />
+                <label class="container__label--size" for="size6">36</label>
+              </div>
+              <div class="container__checkbox container__checkbox--items">
+                <input
+                  type="checkbox"
+                  name="checkbox"
+                  id="size7"
+                  class="container__size"
+                />
+                <label class="container__label--size" for="size7">38</label>
+              </div>
+              <div class="container__checkbox container__checkbox--items">
+                <input
+                  type="checkbox"
+                  name="checkbox"
+                  id="size8"
+                  class="container__size"
+                />
+                <label class="container__label--size" for="size8">40</label>
+              </div>
+              <div class="container__checkbox container__checkbox--items">
+                <input
+                  type="checkbox"
+                  name="checkbox"
+                  id="size9"
+                  class="container__size"
+                />
+                <label class="container__label--size" for="size9">36</label>
+              </div>
+              <div class="container__checkbox container__checkbox--items">
+                <input
+                  type="checkbox"
+                  name="checkbox"
+                  id="size10"
+                  class="container__size"
+                />
+                <label class="container__label--size" for="size10">38</label>
+              </div>
+              <div class="container__checkbox container__checkbox--items">
+                <input
+                  type="checkbox"
+                  name="checkbox"
+                  id="size11"
+                  class="container__size"
+                />
+                <label class="container__label--size" for="size11">40</label>
+              </div>
+            </div>
+
+          </details>
+          <details class="collapse">
+            <summary class="container__modal--options title" >
+              <h3 class="container__title" id="js-filters-modal-price">Faixa de preço</h3>
+              <div class="chevron-down"></div>
+            </summary>
+            <div class="container--modal--price hidden" id="js-show-prices">
+              <div class="container__checkbox container__checkbox--price">
+                <input
+                  type="checkbox"
+                  name="checkbox"
+                  id="price1"
+                  class="container__input"
+                />
+                <label class="container__label" for="price1">de R$0 até R$50</label>
+              </div>
+              <div class="container__checkbox container__checkbox--price">
+                <input
+                  type="checkbox"
+                  name="checkbox"
+                  id="price2"
+                  class="container__input"
+                />
+                <label class="container__label" for="price2"
+                  >de R$51 até R$150</label
+                >
+              </div>
+              <div class="container__checkbox container__checkbox--price">
+                <input
+                  type="checkbox"
+                  name="checkbox"
+                  id="price3"
+                  class="container__input"
+                />
+                <label class="container__label" for="price3"
+                  >de R$151 até R$300</label
+                >
+              </div>
+              <div class="container__checkbox container__checkbox--price">
+                <input
+                  type="checkbox"
+                  name="checkbox"
+                  id="price4"
+                  class="container__input"
+                />
+                <label class="container__label" for="price4"
+                  >de R$301 até R$500</label
+                >
+              </div>
+              <div class="container__checkbox container__checkbox--price">
+                <input
+                  type="checkbox"
+                  name="checkbox"
+                  id="price5"
+                  class="container__input"
+                />
+                <label class="container__label" for="price5"
+                  >a partir de R$ 500</label
+                >
+              </div>
+            </div>
+
+          </details>
+          <div class="modal-buttons hidden" id="js-show-buttons">
+            <div>
+              <button class="buttons-filter button__main">
+                Aplicar
+              </button>
+            </div>
+            <div>
+              <button class="buttons-filter button-clean">Limpar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <footer>
+      <p class="footer__text">M3: Implantação de E-commerce VTEX</p>
+    </footer>
+  </body>
+
+  <script>
+    let cart = [];
+    let productsBase = [];
+    let products = [];
+    const pageSize = 9;
+    let page = 1;
+  </script>
+
+  <script src="bundle.js"></script>
 </html>

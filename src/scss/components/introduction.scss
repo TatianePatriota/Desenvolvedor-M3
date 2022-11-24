@@ -1,0 +1,129 @@
+.introduction__container {
+  margin-bottom: 64px;
+  margin-top: 40px;
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    margin-top: 24px;
+
+    .introduction__container--title {
+      margin-bottom: 12px;
+    }
+
+    .introduction__container--filter {
+      display: block;
+    }
+
+    .btn__introduction {
+      color: $light-gray;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 33px;
+      background-color: $white;
+      border: 1px solid $light-gray;
+      justify-content: center;
+    }
+
+    button {
+      display: flex;
+      flex: 1;
+      &.introduction__container--button {
+        display: none;
+      }
+    }
+
+    .introduction__container--button-mobile {
+      display: block;
+    }
+
+    .introduction__container--btn {
+      display: flex;
+      width: 100%;
+    }
+  }
+}
+
+.introduction__container--title {
+  color: $dark-grey;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 44px;
+}
+
+.introduction__container--filter {
+  display: none;
+}
+
+.introduction__container--button {
+  border: 1px solid $dark-grey;
+  padding: 10px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: $black;
+  background-color: $white;
+  display: block;
+}
+
+.introduction__container--icon {
+  background-image: url(../../img/chevron-down\ .svg);
+  background-repeat: no-repeat;
+  background-position: right;
+  padding: 10px;
+}
+
+.introduction__container--button-mobile {
+  display: none;
+}
+
+.introduction__container--btn {
+  position: relative;
+}
+
+.container__button--items {
+  display: none;
+  border: 1px solid $light-gray;
+  position: absolute;
+  width: 100%;
+  &.visible {
+    display: block;
+  }
+
+  .button--items {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    width: 100%;
+    text-align: start;
+    cursor: pointer;
+    color: $black;
+    border: none;
+  }
+  :hover {
+    color: $white;
+    background-color: $light-blue;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  aside {
+    display: none;
+  }
+
+  .introduction__container {
+    margin-bottom: calc(34px - 18px);
+  }
+
+  .btn__introduction {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 38px;
+    text-transform: uppercase;
+    border-bottom: 1px solid $light-gray;
+    padding: 5px;
+  }
+
+  .container__checkbox--size {
+    width: 162px;
+  }
+}

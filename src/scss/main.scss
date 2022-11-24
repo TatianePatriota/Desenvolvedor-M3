@@ -1,1 +1,68 @@
 @import "reset";
+@import "theme";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+
+  @media screen and (max-width: $mobile) {
+    margin-left: 16px;
+    margin-right: 16px;
+    max-width: calc(100% - 32px);
+  }
+
+  &.between {
+    justify-content: space-between;
+  }
+
+  &.align-center {
+    align-items: center;
+  }
+}
+
+.only-mobile {
+  @media screen and (min-width: $mobile) {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+
+.only-desktop {
+  @media screen and (max-width: $mobile) {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.desktop-hidden {
+  @media screen and (min-width: $mobile) {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+
+@import "components/header";
+@import "components/filters";
+@import "components/input";
+@import "components/introduction";
+@import "components/card";
+@import "components/footer";
+@import "components/buttonLoad";
+@import "components/modal";

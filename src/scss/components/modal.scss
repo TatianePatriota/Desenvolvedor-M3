@@ -1,0 +1,99 @@
+@media screen and( max-width: $mobile) {
+  .introduction__container--button {
+    border: none;
+    font-size: 22px;
+    line-height: 30px;
+    padding: 16px;
+    cursor: pointer;
+  }
+
+  .container__title {
+    font-size: 24px;
+    line-height: 33px;
+    text-transform: uppercase;
+    color: $light-gray;
+    padding-top: 30px;
+  }
+}
+
+.container__modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $white;
+}
+
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid $light-gray;
+  padding: 16px;
+}
+
+.modal__header--title {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 38px;
+  text-transform: uppercase;
+  color: $light-gray;
+}
+
+.button__mobile--modal {
+  background-image: url(../../img/close-modal.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  padding: 10px;
+  border: none;
+}
+
+.chevron-down {
+  background-image: url(../../img/chevron-down\ .svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 18px;
+  height: 13px;
+  border: none;
+}
+
+.container__modal--options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container__modal--mobile {
+  padding: 0 16px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons-filter {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  text-transform: uppercase;
+  border: none;
+  background-color: $light-blue;
+  padding: 8px 52px;
+  margin-top: 30px;
+}
+
+.button-clean {
+  border: 1px solid $light-gray;
+  background-color: $white;
+}
+
+.buttons-filter:hover {
+  color: $white;
+  background-color: $light-blue;
+}
+
+details {
+  summary {
+    list-style: none;
+  }
+}
